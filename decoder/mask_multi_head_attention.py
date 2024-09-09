@@ -1,6 +1,5 @@
 import numpy as np
 from math import sqrt
-from decoder_positionsl_encoding import PositionEncoding
 import warnings
 import os
 
@@ -10,9 +9,8 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 warnings.filterwarnings('ignore')
 
 class Mask_MultiHeadAttention:
-    def __init__(self, num_heads=8, input = ['my name is saurab singh']):
-        embed = PositionEncoding(input)
-        self.embeding_vectors = embed.get_output()
+    def __init__(self, num_heads=8, input = None):
+        self.embeding_vectors = input
         self.no_words = len(self.embeding_vectors)
         self.dim = len(self.embeding_vectors[0][0])
         self.num_heads = num_heads
