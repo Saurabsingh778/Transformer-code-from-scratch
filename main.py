@@ -49,6 +49,6 @@ class Main:
         self.genetated_output = x_decoder_fnorm
     
     def get_output(self):
-        return self.output
+        return self.generated_output
 
 
